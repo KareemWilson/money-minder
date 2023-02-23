@@ -1,5 +1,12 @@
 <div class='d-flex flex-row align-items-baseline justify-content-between p-2 bg bg-primary '>
     <i class="fa-sharp fa-solid fa-bars text-white fa-2xl p-2 m-2"></i>
+
     <%= render partial: 'partials/title', locals: { page_name: @page_name } %>
-    <i class="fa-solid fa-magnifying-glass text-white fa-2xl p-2 my-3"></i>
+    <% if current_page?(new_user_session_path)%>
+        <h4 class='text-white'>login</h4>
+    <%elsif current_page?(new_user_registration_path)%>
+        <h4 class='text-white'>Signup</h4>
+    <%elsif current_page?(authenticated_root_path)%>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <%end%>
 </div>
