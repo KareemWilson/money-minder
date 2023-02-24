@@ -1,12 +1,19 @@
-<div class='d-flex flex-row align-items-baseline justify-content-between p-2 bg bg-primary '>
-    <i class="fa-sharp fa-solid fa-bars text-white fa-2xl p-2 m-2"></i>
+<%= stylesheet_link_tag 'navbar' %>
 
-    <%= render partial: 'partials/title', locals: { page_name: @page_name } %>
-    <% if current_page?(new_user_session_path)%>
-        <h4 class='text-white'>login</h4>
-    <%elsif current_page?(new_user_registration_path)%>
-        <h4 class='text-white'>Signup</h4>
-    <%elsif current_page?(authenticated_root_path)%>
-        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-    <%end%>
+<div class='navbar d-flex flex-row align-items-center justify-content-between p-2'>
+  <% if current_page?(authenticated_root_path) || current_page?(categories_path) %>
+    <i class="fa-sharp fa-solid fa-bars text-white fa-2xl p-2 m-2"></i>
+    <%else%>
+        <%= link_to authenticated_root_path do %>
+        <i class="fa-solid fa-arrow-left text-white fa-2xl p-2 m-2"></i>
+        <% end %>  
+    <% end %>
+  <%= render partial: 'partials/title', locals: { page_name: @page_name } %>
+  <% if current_page?(new_user_session_path) %>
+    <h4 class='text-white'>Login</h4>
+  <% elsif current_page?(new_user_registration_path) %>
+    <h4 class='text-white'>Signup</h4>
+  <% else %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-success' %>
+  <% end %>
 </div>
