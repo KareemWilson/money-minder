@@ -4,13 +4,13 @@ class CategoriesController < ApplicationController
     @page_name = 'Categories'
     @categories = current_user.categories
   end
-    
-  def new 
+
+  def new
     @page_name = 'Create Category'
     @category = Category.new
   end
 
-  def create 
+  def create
     @category = Category.new(category_params.merge(user: current_user))
 
     if @category.save
