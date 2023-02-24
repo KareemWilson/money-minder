@@ -1,0 +1,12 @@
+<%= link_to category_payments_path(category.id) do %>
+    <div class='category-card py-2 bg-white mx-2 my-4'>
+        <div class="d-flex flex-row gap-6 align-items-center px-6 mx-4 h-20">
+            <%= image_tag category.icon, alt: 'icon', class: "img pl-0 pr-3", style: 'width: 6rem;' %>
+            <div class='d-flex flex-column'>
+                <h3 class='text-primary'><%= category.name %></h3>
+                <p class="ml-9 text-secondary" style='font-weight: 600;'>Number of Transactions: <%= category.payments.count %></p>
+                <p class="text-xs text-secondary mb-0 pb-0"><%= category.created_at.strftime('%d %B, %Y') %></p>
+            </div>
+        </div>
+    </div>
+<% end %>
