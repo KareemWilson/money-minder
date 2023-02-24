@@ -5,6 +5,5 @@ class Category < ApplicationRecord
 
 
   validates :name, presence: true
-  validates :email, presence: true
-  validates :icon, presence: true, numericality: { greater_than_or_equal: 0 }
+  validates :icon, presence: true
 end
