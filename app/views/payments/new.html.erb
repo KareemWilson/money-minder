@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'payments' %>
+
+<div class='payment-form d-flex flex-column mt-5'>
+    <%= form_with url: category_payments_path, model: @payment, method: :post, class: 'd-flex flex-column' do |form| %>
+        <div class="w-100 no-border mb-5 bg-white", style="height: 50px;">
+            <%= form.text_field :name, placeholder: 'Payment Name', required: true, class: "w-100 h-100 form-control border-0" %>
+            <%= form.number_field :amount, placeholder: 'Amount in Dollars', required: true, class: "w-100 h-100 form-control" %>
+        </div>
+        <div class="d-flex flex-row justify-content-center my-3">
+            <%= form.label :category, 'Select Category:', class: "btn btn-secondary" %>
+            <%= form.select :category, options_for_select(current_user.categories.map { |c| [c.name, c.id] }), { prompt: 'Categories'}, class: 'select' %>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <%= form.submit "Add", class: "btn p-1 btn-success w-50" %>
+        </div>
+    <% end %>
+    </div>
+</div>
