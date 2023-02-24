@@ -1,0 +1,24 @@
+.fixed-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+}
+
+.add-transaction{
+    border: 1px solid;
+    padding: 1rem 4rem;
+    font-size: 23px;
+}
+.select{
+    height: 2.4rem !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+}
+
+.total-box{
+    background: white;
+    height: 4rem;
+    border-bottom: 1px solid #aeaaaa;
+}

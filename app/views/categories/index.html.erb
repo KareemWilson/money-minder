@@ -1,1 +1,8 @@
-<h1>here is the first category: test<h1>
+<%= stylesheet_link_tag 'category' %>
+
+<div class='categories-container'>
+    <%= render partial: 'partials/category', collection: @categories%>
+    <%= link_to new_category_path do%>
+        <i class="add-category fa-solid fa-circle-plus fa-2xl text-primary"></i>
+    <%end%>
+</div>
