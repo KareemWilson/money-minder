@@ -1,0 +1,12 @@
+<div class='payment-card py-2 bg-white mx-2 my-4'>
+        <div class="d-flex flex-row gap-6 align-items-start px-1 mx-1 h-20 justify-content-around">
+            <%= image_tag 'payment.png', alt: 'icon', class: "img pt-2", style: 'width: 5rem;'%>
+            <div class='d-flex flex-column justify-content-between' style='width: 11rem; min-height: 6rem;'>
+                <h5 class='font-weight-500' style='color: #979595; font-size: 1.55rem;'><%= payment.name %></h5>
+                <div class='border-top'>
+                    <p class="m-0" style='font-size: 0.8rem; color: #b4b4b4;'><%= payment.created_at.strftime('%d %B, %Y') %></p>
+                </div>
+            </div>
+                <h3 class="ml-9" style='font-size: 1.5rem;'>$<%= payment.amount %></h3>
+        </div>
+    </div>
