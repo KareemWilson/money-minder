@@ -21,4 +21,6 @@
   background: white;
   height: 4rem;
   border-bottom: 1px solid #aeaaaa;
+  position: fixed;
+  width: 100%;
 }

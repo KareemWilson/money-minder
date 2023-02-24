@@ -6,7 +6,7 @@
     <p style='font-weight: bold; font-size: 1.1rem;'>Total Paid in this category:</p>
     <p class='text-success'><%= number_to_currency(total_amount) %></p> 
 </div>
-<div style='padding-bottom: 6rem;'>
+<div style='padding-bottom: 6rem; padding-top: 3.5rem;'>
     <%= render partial: 'partials/payment', collection: @payments %>
     <div class='fixed-btn bg-success d-flex justify-content-center align-items-center'>
         <%= button_to "Add new Transaction", new_category_payment_path, method: :get, class: 'add-transaction btn btn-success w-100'%>
