@@ -15,47 +15,46 @@
  */
 
 * {
-    font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 main {
-    height: 100vh;
-    margin: 0;
-    padding-top: 3.4rem;
-    background-color: #e6e8ee !important;
+  height: 100vh;
+  margin: 0;
+  padding-top: 3.4rem;
+  background-color: #e6e8ee !important;
 }
 
 .alert {
-    position: absolute !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 7rem;
-    width: 22rem;
-    top: 5rem;
-    left: 1rem;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
+  position: absolute !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 7rem;
+  width: 22rem;
+  top: 5rem;
+  left: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .alert-notice {
-    background-color: #5fb523;
+  background-color: #5fb523;
 }
 
 .alert-alert {
-    background-color: rgb(223, 87, 87);
+  background-color: rgb(223, 87, 87);
 }
 
-
 .amodal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
