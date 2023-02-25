@@ -1,0 +1,7 @@
+.add-category {
+  bottom: 4rem;
+  right: 2rem;
+  position: fixed;
+  z-index: 9999;
+  font-size: 4rem;
+}

@@ -1,0 +1,18 @@
+<div class='category-form'>
+    <%= form_with url: categories_path, model: @category, method: :post do |form| %>
+        <div class="w-100 no-border my-2 bg-white", style="height: 50px;">
+        <%= form.text_field :name, placeholder: 'Category name', required: true, class: "w-100 h-100 form-control border-0" %>
+        </div>
+        <div class="d-flex flex-column">
+            <%= form.label :icon, 'Select Icon:', class: "btn btn-secondary mt-2" %>
+            <%= form.select :icon, options_for_select([['Investment 💵', 'bank.png'], ['Health 🏥', 'health.png'],
+            ['Shopping 🛍️', 'shopping.png'], ['Entertainment 🍿', 'entertainment.png'], ['Food', 'food.png'],
+            ['Others 📓', 'other.png']], selected: nil), { prompt: 'Icons', class: 'bg-white'} %>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center mt-6">
+            <%= form.submit "Add", class: "btn p-1 rounded-lg btn-success w-50 mt-3" %>
+        </div>
+    <% end %>
+    </div>
+</div>
