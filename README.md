@@ -100,9 +100,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- Soon....
+- [Money-Minder](https://money-minder-eilx.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
