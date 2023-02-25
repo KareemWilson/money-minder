@@ -1,4 +1,3 @@
-
 #-------
 require 'rails_helper'
 RSpec.describe Payment, type: :model do
@@ -17,7 +16,6 @@ RSpec.describe Payment, type: :model do
       expect(@payment).to_not be_valid
     end
 
-
     it 'is not valid without a amount' do
       @payment.amount = nil
       expect(@payment).to_not be_valid
@@ -26,8 +24,8 @@ RSpec.describe Payment, type: :model do
 
   context 'Testing Associations' do
     it 'has_many payment' do
-        expect(@user).to respond_to(:payments)
-      end
+      expect(@user).to respond_to(:payments)
+    end
   end
 
   describe 'attributes' do

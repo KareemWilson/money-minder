@@ -1,4 +1,3 @@
-
 #-------
 require 'rails_helper'
 RSpec.describe Category, type: :model do
@@ -17,7 +16,6 @@ RSpec.describe Category, type: :model do
       expect(@category).to_not be_valid
     end
 
-
     it 'is not valid without a icon' do
       @category.icon = nil
       expect(@category).to_not be_valid
@@ -26,19 +24,18 @@ RSpec.describe Category, type: :model do
 
   context 'Testing Associations' do
     it 'has_many payments' do
-        expect(@category).to respond_to(:payments)
-      end
-      
-      it 'belongs_to user' do
-        expect(@category).to respond_to(:user)
-      end
+      expect(@category).to respond_to(:payments)
+    end
+
+    it 'belongs_to user' do
+      expect(@category).to respond_to(:user)
+    end
   end
 
   describe 'attributes' do
     it 'has a name, icon, and user attribute' do
-      category = Category.new(name: 'Test Category', icon: 1, user: User.new)
       expect(@category.name).to eq('entertainment')
-      expect(@category.icon).to eq("image.png")
+      expect(@category.icon).to eq('image.png')
       expect(@category.user).to be_instance_of(User)
     end
   end

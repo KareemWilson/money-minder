@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe Payment, type: :model do
@@ -6,7 +5,6 @@ RSpec.describe Payment, type: :model do
     @user = User.create!(name: 'Kareem', email: 'kjosshn@gmail.com', password: '123456')
     @category = Category.create!(user: @user, name: 'entertainment', icon: 'image.png')
     @payment = Payment.create!(author: @user, name: 'example', amount: 30)
-
   end
 
   context 'Testing Validations' do
@@ -19,7 +17,6 @@ RSpec.describe Payment, type: :model do
       expect(@user).to_not be_valid
     end
 
-
     it 'is not valid without a amount' do
       @user.email = nil
       expect(@user).to_not be_valid
@@ -28,8 +25,8 @@ RSpec.describe Payment, type: :model do
 
   context 'Testing Associations' do
     it 'has_many payment' do
-        expect(@user).to respond_to(:payments)
-      end
+      expect(@user).to respond_to(:payments)
+    end
   end
 
   describe 'attributes' do
